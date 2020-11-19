@@ -1,0 +1,14 @@
+cn/booktable/modules/service/kids/impl/KidsCopyDataServiceImpl.class
+cn/booktable/modules/component/kids/impl/KidsCopyDataComponentImpl.class
+cn/booktable/modules/component/kids/impl/KidsMediaMetadataComponentImpl.class
+cn/booktable/modules/service/kids/impl/KidsMediaMetadataServiceImpl.class
+cn/booktable/modules/component/kids/KidsMediaCategoryComponent.class
+cn/booktable/modules/dao/kids/KidsMediaCategoryDao.class
+cn/booktable/modules/component/kids/KidsMediaMetadataComponent.class
+cn/booktable/modules/dao/kids/KidsCopyDataDao.class
+cn/booktable/modules/component/kids/impl/KidsMediaCategoryComponentImpl.class
+cn/booktable/modules/service/kids/impl/KidsElasticsearchServiceImpl.class
+cn/booktable/modules/component/kids/impl/KeyValueReader.class
+cn/booktable/modules/component/kids/KidsCopyDataComponent.class
+cn/booktable/modules/service/kids/impl/KidsMediaCategoryServiceImpl.class
+cn/booktable/modules/dao/kids/KidsMediaMetadataDao.class

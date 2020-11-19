@@ -1,0 +1,8 @@
+cn/booktable/modules/dao/mobile/HelloDao.class
+cn/booktable/modules/service/mobile/impl/MobileViewPageServiceImpl.class
+cn/booktable/modules/dao/mobile/MobileViewPageDao.class
+cn/booktable/modules/component/mobile/MobileViewPageComponent.class
+cn/booktable/modules/service/mobile/impl/HelloServiceImpl.class
+cn/booktable/modules/component/mobile/impl/HelloComponentImpl.class
+cn/booktable/modules/component/mobile/HelloComponent.class
+cn/booktable/modules/component/mobile/impl/MobileViewPageComponentImpl.class

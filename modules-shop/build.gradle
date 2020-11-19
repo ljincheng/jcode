@@ -1,0 +1,87 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.0'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+    id 'java-library'
+}
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+
+group = 'cn.booktable'
+version = '1.0.0'
+sourceCompatibility = '1.8'
+
+ext {
+    set('springCloudVersion', "2020.0.0-SNAPSHOT")
+    set("booktableVersion","1.0.0")
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+    compile.exclude module: 'spring-boot-starter-logging'//排除对默认logging的依赖
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.spring.io/snapshot' }
+    maven { url 'https://repo.spring.io/milestone' }
+    mavenLocal()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4'
+
+//	implementation "org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE"
+//	implementation "org.springframework.cloud:spring-cloud-context"
+
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+    implementation 'org.springframework:spring-context-support'
+//	implementation 'org.springframework.boot:spring-boot-configuration-processor'
+    implementation 'org.springframework.boot:spring-boot-starter-log4j2'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+    
+
+    implementation 'org.apache.shiro:shiro-core:1.4.0'
+    implementation 'org.apache.shiro:shiro-spring:1.4.0'
+    implementation 'com.alibaba:druid-spring-boot-starter:1.2.3'
+    implementation 'com.alibaba:fastjson:1.2.75'
+    implementation 'org.apache.commons:commons-lang3'
+    implementation 'commons-fileupload:commons-fileupload'
+    implementation 'commons-io:commons-io'
+    implementation 'commons-codec:commons-codec'
+
+
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    compileOnly 'org.projectlombok:lombok'
+    runtimeOnly 'mysql:mysql-connector-java'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    compile project(':booktable-common')
+    compile project(':booktable-core')
+   
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
+
+test {
+    useJUnitPlatform()
+}
+

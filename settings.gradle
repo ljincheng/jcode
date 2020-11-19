@@ -1,0 +1,2 @@
+rootProject.name = 'codework'
+include 'app-admin', 'booktable-common', 'booktable-core', 'modules-sys', 'modules-sys-impl', 'modules-kids', 'modules-kids-impl', 'modules-shop', 'modules-shop-impl', 'modules-mobile', 'modules-mobile-impl'

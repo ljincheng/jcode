@@ -1,0 +1,8 @@
+cn/booktable/modules/entity/kids/KidsCopyDataDo.class
+cn/booktable/modules/entity/kids/KidsMediaCategoryDo.class
+cn/booktable/modules/service/kids/KidsElasticsearchService.class
+cn/booktable/modules/entity/kids/EsKidsMediaMetadataBo.class
+cn/booktable/modules/service/kids/KidsCopyDataService.class
+cn/booktable/modules/service/kids/KidsMediaMetadataService.class
+cn/booktable/modules/entity/kids/KidsMediaMetadataDo.class
+cn/booktable/modules/service/kids/KidsMediaCategoryService.class

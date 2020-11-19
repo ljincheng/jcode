@@ -1,0 +1,8 @@
+/usr/local/workspace/github/ljincheng/codework/booktable-modules/modules-kids/src/main/java/cn/booktable/modules/entity/kids/KidsMediaMetadataDo.java
+/usr/local/workspace/github/ljincheng/codework/booktable-modules/modules-kids/src/main/java/cn/booktable/modules/entity/kids/KidsMediaCategoryDo.java
+/usr/local/workspace/github/ljincheng/codework/booktable-modules/modules-kids/src/main/java/cn/booktable/modules/entity/kids/EsKidsMediaMetadataBo.java
+/usr/local/workspace/github/ljincheng/codework/booktable-modules/modules-kids/src/main/java/cn/booktable/modules/entity/kids/KidsCopyDataDo.java
+/usr/local/workspace/github/ljincheng/codework/booktable-modules/modules-kids/src/main/java/cn/booktable/modules/service/kids/KidsCopyDataService.java
+/usr/local/workspace/github/ljincheng/codework/booktable-modules/modules-kids/src/main/java/cn/booktable/modules/service/kids/KidsMediaMetadataService.java
+/usr/local/workspace/github/ljincheng/codework/booktable-modules/modules-kids/src/main/java/cn/booktable/modules/service/kids/KidsMediaCategoryService.java
+/usr/local/workspace/github/ljincheng/codework/booktable-modules/modules-kids/src/main/java/cn/booktable/modules/service/kids/KidsElasticsearchService.java

@@ -1,0 +1,4 @@
+cn/booktable/modules/entity/mobile/HelloDo.class
+cn/booktable/modules/service/mobile/MobileViewPageService.class
+cn/booktable/modules/entity/mobile/MobileViewPageDo.class
+cn/booktable/modules/service/mobile/HelloService.class
