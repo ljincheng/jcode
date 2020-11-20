@@ -45,7 +45,9 @@ public class BaseController {
         Subject subject = SecurityUtils.getSubject();
         if(subject!=null && subject.getPrincipal()!=null )
         {
-            return (SysUserDo) subject.getPrincipal();
+            if(subject.getPrincipal() instanceof SysUserDo) {
+                return (SysUserDo) subject.getPrincipal();
+            }
         }
         return null;
 

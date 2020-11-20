@@ -1,6 +1,10 @@
 buildscript {
+
     ext {
-        springBootVersion = '2.1.4.RELEASE'
+        set('springCloudVersion', "2020.0.0-SNAPSHOT")
+        set("booktableVersion","1.0.0")
+        set("springBootVersion","2.4.0")
+        set("shiroVersion","1.4.0")
     }
     repositories {
            mavenCentral()
@@ -8,22 +12,60 @@ buildscript {
             maven { url 'https://repo.spring.io/milestone' }
             mavenLocal()
     }
-    dependencies {
-          
-    }
+
 }
+
 
 
 allprojects {
     apply plugin: 'idea'
-    apply plugin: 'java-library'
+    group = 'cn.booktable'
     version = '1.0.0'
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
+    //sourceCompatibility = 1.8
+//    targetCompatibility = 1.8
+
 }
 
 subprojects {
-    
+    apply plugin: 'java-library'
+
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+        compile.exclude module: 'spring-boot-starter-logging'//排除对默认logging的依赖
+    }
+
+    repositories {
+        mavenCentral()
+        maven { url 'https://repo.spring.io/snapshot' }
+        maven { url 'https://repo.spring.io/milestone' }
+        mavenLocal()
+    }
+
+    dependencies {
+        // all project dependencies
+        implementation 'org.springframework.boot:spring-boot-starter:2.4.0'
+        implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4'
+        implementation 'org.springframework.boot:spring-boot-starter-log4j2:2.4.0'
+        implementation 'com.alibaba:fastjson:1.2.75'
+        implementation 'org.apache.commons:commons-lang3:3.11'
+        compileOnly 'org.projectlombok:lombok:1.18.16'
+        annotationProcessor 'org.projectlombok:lombok:1.18.16'
+        testImplementation 'org.springframework.boot:spring-boot-starter-test:2.4.0'
+
+        // common
+//        implementation 'org.apache.commons:commons-lang3'
+//        implementation 'commons-fileupload:commons-fileupload'
+//        implementation 'commons-io:commons-io'
+        implementation 'commons-codec:commons-codec:1.15'
+    }
+
+
+
+    test {
+        useJUnitPlatform()
+    }
 }
 
- 
+
