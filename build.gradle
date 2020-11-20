@@ -66,6 +66,21 @@ subprojects {
     test {
         useJUnitPlatform()
     }
+
+    apply plugin: "maven"
+    def localRepositoryPath = 'file://'+ new File(System.getProperty('user.home'),'.m2/repository').absolutePath
+    uploadArchives {
+        repositories {
+            mavenDeployer {
+                repository(url: localRepositoryPath)
+                pom.project {
+                    name = project.name
+                    version = project.version
+                    groupId = project.group
+                }
+            }
+        }
+    }
 }
 
 
